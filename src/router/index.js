@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import PaginaLogin from '@/views/PaginaLogin.vue';
-import PaginaInicial from '@/views/PaginaInicial.vue';
+import PaginaCadastroLogin from '@/views/PaginaCadastroLogin.vue';
+import FormularioCadastroLogin from '@/components/FormularioCadastroLogin.vue';
 import LayoutPadrao from '@/layouts/LayoutPadrao.vue';
 
 const routes = [
@@ -11,9 +12,14 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'PaginaInicial',
-    component: PaginaInicial,
+    name: 'PaginaCadastroLogin',
+    component: PaginaCadastroLogin,
     meta: { layout: LayoutPadrao }
+  },
+  {
+    path: '/criar-conta',
+    name: 'FormularioCadastroLogin',
+    component: FormularioCadastroLogin
   }
 ];
 

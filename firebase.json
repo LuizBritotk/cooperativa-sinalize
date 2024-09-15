@@ -1,0 +1,23 @@
+{
+    "hosting": {
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Embedder-Policy",
+              "value": "require-corp"
+            }
+          ]
+        }
+      ]
+    },
+    "scripts": {
+      "predeploy": "npm install -g firebase-tools",
+      "check-firebase-version": "firebase --version"
+    }
+  }

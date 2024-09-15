@@ -1,65 +1,59 @@
 <template>
-  <div class="login-wrapper">
-    <div class="login-side">
-      <a href="#" title="Logo">
-        <img class="logo" src="@/assets/logo.png" alt="Logo">
-      </a>
-      <div class="my-form__wrapper">
-        <div class="login-welcome-row">
-          <h1>Bem-vindo de volta à Sinalize &#x1F44B;</h1>
-          <p>Por favor, insira seus dados para continuar.</p>
-        </div>
-        <form class="my-form" @submit.prevent="login">
-          <div class="socials-row">
-            <a href="#" title="Usar Google">
-              <img src="@/assets/google.png" alt="Google">
-              Entrar com Google
-            </a>
-            <a href="#" title="Usar Apple">
-              <img src="@/assets/apple.png" alt="Apple">
-              Entrar com Apple
-            </a>
-          </div>
-          <div class="divider">
-            <div class="divider-line"></div>
-            Ou
-            <div class="divider-line"></div>
-          </div>
-          <div class="text-field">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Seu Email" required>
-            <img src="@/assets/email.svg" alt="Ícone de Email" title="Ícone de Email">
-          </div>
-          <div class="text-field">
-            <label for="password">Senha:</label>
-            <input id="password" type="password" name="password" placeholder="Sua Senha" title="Mínimo de 6 caracteres, pelo menos 1 letra, 1 número e 1 símbolo" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$" required>
-            <img src="@/assets/password.svg" alt="Ícone de Senha" title="Ícone de Senha">
-          </div>
-          <input type="submit" class="my-form__button" value="Entrar">
-          <div class="my-form__actions">
-            <div class="my-form__row">
-              <span>Esqueceu sua senha?</span>
-              <a href="#" title="Redefinir Senha">Redefinir Senha</a>
-            </div>
-            <div class="my-form__signup">
-              <a href="#" title="Criar Conta">Criar Conta</a>
-            </div>
-          </div>
-        </form>
-      </div>
+  <div class="cartao-login">
+    <div class="logo">
+      <img src="@/assets/cooper-logo.png" alt="Cooper Logo" class="logo" />
     </div>
-    <div class="info-side">
-      <img src="@/assets/mock.png" alt="Mock" class="mockup">
-      <div class="welcome-message">
-        <h2>Bem-vindo à Sinalize! 👋</h2>
-        <p>Junte-se a nós para melhorar a sinalização e a segurança nas estradas.</p>
-      </div>
+    <div class="header">
+      <h1 class="titulo-form">Sinalize</h1>
     </div>
+    <hr class="linha-divisoria" />
+    <form class="formulario-login" @submit.prevent="login">
+      <ul class="formulario-lista">
+        <li class="formulario-item">
+          <div class="campo-texto" :class="{ 'campo-texto--erro': erroEmail }">
+            <label for="email" class="campo-label">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu Email" v-model="email" required />
+            <span class="mensagem-erro" v-if="erroEmail">{{ erroEmail }}</span>
+          </div>
+        </li>
+        <li class="formulario-item">
+          <div class="campo-texto campo-senha" :class="{ 'campo-texto--erro': erroSenha }">
+            <label for="senha" class="campo-label">Senha</label>
+            <input id="senha" type="password" name="senha" placeholder="Sua Senha" v-model="senha" title="Mínimo de 6 caracteres, pelo menos 1 letra, 1 número e 1 símbolo" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$" required />
+            <button type="button" class="alternar-visibilidade-senha" @click="alternarVisibilidadeSenha">Mostrar</button>
+            <span class="mensagem-erro" v-if="erroSenha">{{ erroSenha }}</span>
+          </div>
+        </li>
+        <li class="formulario-item">
+          <button type="submit" class="botao-formulario">Entrar</button>
+        </li>
+        <li class="formulario-item">
+          <a href="#" class="esqueceu-senha" @click.prevent="redirecionarParaRedefinirSenha">Esqueceu sua senha?</a>
+        </li>
+      </ul>
+      <div class="divisor">
+        <div class="divisor-linha"></div>
+        <span class="campo-label">Ou</span>
+        <div class="divisor-linha"></div>
+      </div>
+      <ul class="redes-sociais-lista">
+        <li class="redes-sociais-item">
+          <button type="button" class="botao-rede-social" @click="loginComGoogle">
+            <img src="@/assets/google.png" alt="Google" class="icone-pequeno" />
+            Entrar com Google
+          </button>
+        </li>
+      </ul>
+      <div class="acoes-formulario">
+        <a href="#" class="criar-conta" @click.prevent="redirecionarParaCriarConta">Criar Conta</a>
+      </div>
+    </form>
   </div>
 </template>
 
-<script src="@/scripts/FormularioLogin.js"></script>
+<script src="../scripts/FormularioLogin.js"></script>
 
 <style scoped>
+@import '@/styles/Index.css';
 @import '@/styles/FormularioLogin.css';
 </style>

@@ -1,373 +1,235 @@
-:root {
-    --primary: #4978F0;
-    --primary-light: #E1EEF5;
-    --primary-dark: #3A5BB5;
-    --secondary: #1D1D1D;
-    --background: #F4F1FF;
-    --text: #1F2346;
-    --border-color: #E1EEF5;
-    --label-color: #1D1D1D;
-}
-
-body {
-    font-size: 1rem;
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Mulish, sans-serif;
+  box-sizing: border-box;
 }
 
-.socials-row {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+@keyframes rotate {
+  100% {
+    background-position: 15% 50%;
+  }
 }
 
-.socials-row img {
-    width: 1.5rem;
-    height: 1.5rem;
+:root {
+  --color-button: #4CAF50;
+  --color-label: #c8e0ec;
+  --color-label-black: #040f14;
+  --color-form-bg: rgba(255, 255, 255, 0.9);
 }
 
-.socials-row > a {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    width: 100%;
-    min-height: 3rem;
-    display: flex;
-    gap: 0.75rem;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: var(--text);
-    padding: 0.5rem;
-    border: 1px solid var(--primary-light);
-    font-weight: 700;
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 35%);
+  pointer-events: none;
 }
 
-.socials-row > a:hover {
-    border: 1px solid var(--primary);
+.cartao-login {
+  position: relative;
+  margin: 1% auto;
+  width: 90%;
+  max-width: 500px;
+  padding: 15px 30px 44px;
+  border-radius: 20px;
+  background: var(--color-form-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10
 }
 
-.divider {
-    display: flex;
-    flex-direction: row;
-    color: var(--secondary);
-    gap: 1rem;
-    align-items: center;
+@media (min-width: 628px) {
+  .cartao-login {
+    width: 70%;
+    max-width: 500px;
+  }
 }
 
-.divider-line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--secondary);
-    opacity: .2;
+.titulo-login {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  color: var(--color-primary-light);
+  color: #f9f9f9;
 }
 
-.login-wrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: 4fr 3fr;
-    margin: 0 auto;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.login-side {
-    padding: 11.75rem 2rem 3rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.info-side {
-    height: 100vh;
-    padding: 5.25rem 3rem 3rem 2rem;
-    color: #401B3D;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    background-color: var(--background);
-}
-
-.info-side h2 {
-    margin-top: 3rem;
-    color: var(--text);
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
-}
-
-.info-side p {
-    font-size: 1.2rem;
-}
-
-.info-side img {
-    max-width: 53.75rem;
-}
-
-.welcome-message {
-    max-width: 22.5rem;
+.titulo-form {
+  color: var(--color-primary-light);
+  font-size: 24px;
+  margin: 0 0 12px;
+  font-size: 62px;
 }
 
 .logo {
-    height: 3rem;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
+  width: 35%;
+  height: 30%;
+  margin-left: 30%;
 }
 
-.my-form__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    max-width: 28.75rem;
-    width: 100%;
-    padding: 3rem 2rem;
-    height: fit-content;
-    box-shadow: 
-        rgba(100, 100, 111, 0.2)
-        0rem 6px 26px 0rem;
+h1 {
+  font-size: 24px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.my-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    position: relative;
-    gap: 1rem;
+.linha-divisoria {
+  border-top: 1px solid var(--color-label-black);
 }
 
-.login-welcome {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    object-fit: cover;
+.campo-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-label-black) !important;
+  left: 10px;
+  text-align: left;
 }
 
-.login-welcome-row {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
+.cartao-login > h3 {
+  color: rgb(255 255 255 / 38%);
+  margin: 0 0 48px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.my-form__button {
-    background-color: var(--primary);
-    color: white;
-    white-space: nowrap;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    line-height: 3.125rem;
-    outline: none;
-    font-size: 1.125rem;
-    letter-spacing: .025em;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 800;
-    min-height: 3.125rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,.15);
-    transition: all .3s ease;
-    -webkit-transition: all .3s ease;
+.formulario-login {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+  margin-top: 15px;
 }
 
-.my-form__actions {
-    display: flex;
-    flex-direction: column;
-    color: var(--secondary);
-    gap: 1rem;
-    margin-top: 0.5rem;
+.formulario-login > :is(input, button) {
+  width: 100%;
+  height: 56px;
+  border-radius: 6px;
+  border: 0;
 }
 
-.my-form__actions a {
-    color: var(--secondary);
-    font-weight: 600;
-    text-decoration: none;
+.formulario-login > input {
+  color: var(--color-text);
+  background: var(--color-primary-light);
+  font-family: inherit;
+  font-size: 16px;
+  padding: 0 16px;
 }
 
-.my-form__actions a:hover {
-    text-decoration: underline;
+.formulario-login > input:focus {
+  outline: var(--color-primary);
 }
 
-.my-form__row {
-    display: flex;
-    justify-content: space-between;
+.formulario-login > input::placeholder {
+  color: rgb(255 255 255 / 38%);
 }
 
-.my-form__signup {
-    display: flex;
-    justify-content: center;
+.formulario-login > button {
+  cursor: pointer;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  background: var(--color-button);
+  color: #f9f9f9;
+  border: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.375s;
 }
 
-.my-form__signup a {
-    color: var(--primary);
-    font-weight: 800;
-    text-decoration: none;
-    font-size: 1.125rem;
+.formulario-login > a {
+  color: var(--color-primary);
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 30px;
 }
 
-.my-form__signup a:hover {
-    text-decoration: underline;
+.campo-senha {
+  position: relative;
 }
 
-.text-field {
-    position: relative;
-    margin-bottom: 1rem;
+.campo-senha input {
+  padding-right: 50px;
 }
 
-.text-field input {
-    color: var(--secondary);
-    font-size: 1rem;
-    font-weight: 500;
-    max-width: 100%;
-    width: 100%;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 0.5rem 2.5rem 0.5rem 0.5rem; /* Adjust padding to make space for the icon */
-    margin-top: 0.25rem;
-    box-sizing: border-box;
+.alternar-visibilidade-senha {
+  position: absolute;
+  right: 10px;
+  top: 65%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
 }
 
-.text-field input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+.icone-pequeno {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-.text-field label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--label-color);
-    display: block;
-    margin-bottom: 0.25rem;
+.botao-rede-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  border-radius: 6px;
+  border: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.375s;
+  margin-bottom: 16px;
+  background: grey;
 }
 
-.text-field img {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.5rem;
-    height: 1.5rem;
+.botao-rede-social img {
+  margin-right: 10px;
 }
 
-.my-form__button {
-    background-color: var(--primary);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 1rem;
+.formulario-lista,
+.redes-sociais-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.my-form__button:hover {
-    background-color: var(--primary-dark);
+.formulario-item,
+.redes-sociais-item {
+  margin-bottom: 16px;
 }
 
-.my-form__actions {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.redes-sociais-item:last-child {
+  margin-bottom: 0;
 }
 
-.my-form__actions a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 0.5rem;
+.divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -8px 0;
 }
 
-.my-form__actions a:hover {
-    text-decoration: underline;
+.divisor-linha {
+  flex: 1;
+  height: 1px;
+  background-color: #5e7e8b;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    .login-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .login-side {
-        padding: 8rem 2rem 3rem 2rem;
-    }
-
-    .info-side {
-        padding: 4rem 2rem 2rem 2rem;
-    }
-
-    .info-side h2 {
-        font-size: 1.5rem;
-    }
-
-    .info-side p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .login-side {
-        padding: 6rem 1rem 2rem 1rem;
-    }
-
-    .info-side {
-        padding: 3rem 1rem 1rem 1rem;
-    }
-
-    .info-side h2 {
-        font-size: 1.25rem;
-    }
-
-    .info-side p {
-        font-size: 0.875rem;
-    }
-
-    .my-form__wrapper {
-        padding: 2rem 1rem;
-    }
-
-    .my-form__button {
-        font-size: 1rem;
-        line-height: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .login-side {
-        padding: 4rem 1rem 1rem 1rem;
-    }
-
-    .info-side {
-        padding: 2rem 1rem 1rem 1rem;
-    }
-
-    .info-side h2 {
-        font-size: 1rem;
-    }
-
-    .info-side p {
-        font-size: 0.75rem;
-    }
-
-    .my-form__wrapper {
-        padding: 1rem 0.5rem;
-    }
-
-    .my-form__button {
-        font-size: 0.875rem;
-        line-height: 2rem;
-    }
+.divisor span {
+  margin: 0 10px;
+  color: var(--color-primary-light);
 }

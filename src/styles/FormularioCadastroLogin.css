@@ -1,0 +1,14 @@
+.campo {
+    margin-bottom: 15px;
+  }
+  
+  .campo label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .campo input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }

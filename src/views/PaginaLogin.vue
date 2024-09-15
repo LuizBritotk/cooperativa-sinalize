@@ -1,18 +1,20 @@
 <template>
+  <div>
+    <FundoTelaLogin />
+    <!-- <h1 class="titulo-pagina">Login</h1> -->
     <FormularioLogin />
-  </template>
-  
-  <script>
-  import FormularioLogin from '@/components/FormularioLogin.vue';
-  
-  export default {
-    name: 'PaginaLogin',
-    components: {
-      FormularioLogin
-    }
+  </div>
+</template>
+
+<script>
+import FundoTelaLogin from '@/components/FundoTelaLogin.vue';
+import FormularioLogin from '@/components/FormularioLogin.vue';
+
+export default {
+  name: 'PaginaLogin',
+  components: {
+    FundoTelaLogin,
+    FormularioLogin
   }
-  </script>
-  
-  <style scoped>
-  /* Estilos para a página de login */
-  </style>
+};
+</script>
