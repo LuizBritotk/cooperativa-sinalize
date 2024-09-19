@@ -1,12 +1,5 @@
 import { ref } from "vue";
-import { auth } from "@/firebaseConfig";
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  FacebookAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
+import UsuarioServico from "@/services/UsuarioServico";
 
 export default {
   name: 'FormularioLoginV2',
@@ -14,62 +7,62 @@ export default {
     const email = ref("");
     const senha = ref("");
     const nome = ref("");
+    const cpf = ref("");
+    const celular = ref("");
+    const foto = ref("");
+    const marcaId = ref("");
+    const admin = ref(false);
+    const ativo = ref(false);
 
     const login = async () => {
       try {
-        await signInWithEmailAndPassword(auth, email.value, senha.value);
+        const response = await UsuarioServico.loginUsuario(email.value, senha.value);
         alert("Login bem-sucedido!");
+        console.log(response);
       } catch (error) {
         alert("Erro ao fazer login: " + error.message);
       }
     };
 
     const registrar = async () => {
+      const usuario = {
+        nome: nome.value,
+        email: email.value,
+        senha: senha.value,
+        cpf: cpf.value,
+        celular: celular.value,
+        foto: foto.value,
+        marcaId: marcaId.value,
+        admin: admin.value,
+        ativo: ativo.value,
+        grupos: ["usuario", "vendedor", "gerente"],
+      };
       try {
-        await createUserWithEmailAndPassword(auth, email.value, senha.value);
+        const response = await UsuarioServico.registrarUsuario(usuario);
         alert("Cadastro bem-sucedido!");
+        console.log(response);
       } catch (error) {
         alert("Erro ao se cadastrar: " + error.message);
       }
     };
 
     const loginComGoogle = async () => {
-      const provider = new GoogleAuthProvider();
       try {
-        await signInWithPopup(auth, provider);
+        const response = await UsuarioServico.loginComGoogle();
         alert("Login com Google bem-sucedido!");
+        console.log(response);
       } catch (error) {
         alert("Erro ao fazer login com Google: " + error.message);
       }
     };
 
     const loginComFacebook = async () => {
-      const provider = new FacebookAuthProvider();
       try {
-        await signInWithPopup(auth, provider);
+        const response = await UsuarioServico.loginComFacebook();
         alert("Login com Facebook bem-sucedido!");
+        console.log(response);
       } catch (error) {
         alert("Erro ao fazer login com Facebook: " + error.message);
-      }
-    };
-
-    const registrarComGoogle = async () => {
-      const provider = new GoogleAuthProvider();
-      try {
-        await signInWithPopup(auth, provider);
-        alert("Cadastro com Google bem-sucedido!");
-      } catch (error) {
-        alert("Erro ao se cadastrar com Google: " + error.message);
-      }
-    };
-
-    const registrarComFacebook = async () => {
-      const provider = new FacebookAuthProvider();
-      try {
-        await signInWithPopup(auth, provider);
-        alert("Cadastro com Facebook bem-sucedido!");
-      } catch (error) {
-        alert("Erro ao se cadastrar com Facebook: " + error.message);
       }
     };
 
@@ -77,12 +70,16 @@ export default {
       email,
       senha,
       nome,
+      cpf,
+      celular,
+      foto,
+      marcaId,
+      admin,
+      ativo,
       login,
       registrar,
       loginComGoogle,
       loginComFacebook,
-      registrarComGoogle,
-      registrarComFacebook,
     };
   },
   mounted() {
