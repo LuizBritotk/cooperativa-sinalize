@@ -5,7 +5,6 @@ const path = require('path');
 module.exports = defineConfig({
   transpileDependencies: true,
 
-  // Configurações específicas do Webpack
   configureWebpack: {
     resolve: {
       alias: {
@@ -15,13 +14,12 @@ module.exports = defineConfig({
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {
-          VUE_APP_API_URL: JSON.stringify(process.env.VUE_APP_API_URL_LOCALHOST),
+          VUE_APP_API_URL_LOCALHOST: JSON.stringify(process.env.VUE_APP_API_URL_LOCALHOST),
         },
       }),
     ],
   },
 
-  // Configurações do servidor de desenvolvimento
   devServer: {
     proxy: {
       '/api': {
@@ -32,11 +30,8 @@ module.exports = defineConfig({
       },
     },
     port: 8080,
-    open: true, // Abre o navegador automaticamente
+    open: true,
   },
 
-  // Outras configurações do Vue CLI
-  pluginOptions: {
-    // Configurações adicionais de plugins podem ser adicionadas aqui
-  },
+  pluginOptions: {},
 });
