@@ -1,16 +1,7 @@
-const { defineConfig } = require('@vue/cli-service');
 const webpack = require('webpack');
-const path = require('path');
 
-module.exports = defineConfig({
-  transpileDependencies: true,
-
+module.exports = {
   configureWebpack: {
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src'),
-      },
-    },
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {
@@ -23,15 +14,19 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '/api': {
-        target: process.env.VUE_APP_API_URL_LOCALHOST,
+        target: process.env.VUE_APP_API_URL_LOCALHOST || 'http://localhost:3000', // Default to localhost:3000 if not set
         changeOrigin: true,
         secure: false,
-        pathRewrite: { '^/api': '' },
       },
     },
     port: 8080,
     open: true,
+    onBeforeSetupMiddleware: function (devServer) {
+      if (!devServer) {
+        throw new Error('webpack-dev-server is not defined');
+      }
+    },
   },
 
   pluginOptions: {},
-});
+};
