@@ -365,3 +365,17 @@
     height: 20px;
     margin-right: 10px;
   }
+  .form__input-wrapper {
+    position: relative;
+  }
+  
+  .mostrar-senha-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+  }

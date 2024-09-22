@@ -1,8 +1,13 @@
+
 import { ref } from "vue";
 import UsuarioServico from "@/services/UsuarioServico";
+import { VueMaskDirective } from 'v-mask';
 
 export default {
   name: 'FormularioLoginV2',
+  directives: {
+    'mask': VueMaskDirective
+  },
   setup() {
     const email = ref("");
     const senha = ref("");
@@ -13,6 +18,7 @@ export default {
     const marcaId = ref("");
     const admin = ref(false);
     const ativo = ref(false);
+    const mostrarSenha = ref(false);
 
     const login = async () => {
       try {
@@ -21,28 +27,6 @@ export default {
         console.log(response);
       } catch (error) {
         alert("Erro ao fazer login: " + error.message);
-      }
-    };
-
-    const registrar = async () => {
-      const usuario = {
-        nome: nome.value,
-        email: email.value,
-        senha: senha.value,
-        cpf: cpf.value,
-        celular: celular.value,
-        foto: foto.value,
-        marcaId: marcaId.value,
-        admin: admin.value,
-        ativo: ativo.value,
-        grupos: ["usuario", "vendedor", "gerente"],
-      };
-      try {
-        const response = await UsuarioServico.registrarUsuario(usuario);
-        alert("Cadastro bem-sucedido!");
-        console.log(response);
-      } catch (error) {
-        alert("Erro ao se cadastrar: " + error.message);
       }
     };
 
@@ -56,6 +40,23 @@ export default {
       }
     };
 
+    const registrar = async () => {
+      const usuario = {
+        nome: nome.value,
+        email: email.value,
+        senha: senha.value,
+        cpf: cpf.value,
+        celular: celular.value,
+      };
+      try {
+        const response = await UsuarioServico.registrarUsuario(usuario);
+        alert("Cadastro bem-sucedido!");
+        console.log(response);
+      } catch (error) {
+        alert("Erro ao se cadastrar: " + error.message);
+      }
+    };
+
     const loginComFacebook = async () => {
       try {
         const response = await UsuarioServico.loginComFacebook();
@@ -64,6 +65,10 @@ export default {
       } catch (error) {
         alert("Erro ao fazer login com Facebook: " + error.message);
       }
+    };
+
+    const toggleMostrarSenha = () => {
+      mostrarSenha.value = !mostrarSenha.value;
     };
 
     return {
@@ -76,10 +81,12 @@ export default {
       marcaId,
       admin,
       ativo,
+      mostrarSenha,
       login,
       registrar,
       loginComGoogle,
       loginComFacebook,
+      toggleMostrarSenha,
     };
   },
   mounted() {
