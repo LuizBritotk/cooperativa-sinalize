@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import LayoutPadrao from '@/layouts/LayoutPadrao.vue';
+import LayoutApresentacao from '@/layouts/LayoutApresentacao.vue';
 
 export default {
   computed: {
     layout() {
-      const layout = this.$route.meta.layout || LayoutPadrao;
-      return layout;
+      return this.$route.meta.layout || LayoutApresentacao;
     }
   }
 }

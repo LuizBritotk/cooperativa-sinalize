@@ -1,0 +1,43 @@
+/* ApresentacaoCorpo.css */
+
+.corpo {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .titulo {
+    font-size: 60px;
+    margin: 170px 0 0 0;
+  }
+  
+  .corpo p {
+    margin-bottom: 35px;
+  }
+  
+  .dentro-corpo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    gap: 9px;
+    align-items: center;
+  }
+  
+  .email {
+    height: 2.7rem;
+    width: 53%;
+    border-radius: 8px;
+    min-width: 100px;
+  }
+  
+  .inscrever-sinalize {
+    border: 1px white solid;
+    background: green;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: max-content;
+  }

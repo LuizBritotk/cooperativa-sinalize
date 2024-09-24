@@ -1,0 +1,161 @@
+/* PaginaApresentacao.css */
+
+.pagina-apresentacao {
+    height: 100vh;
+  }
+  
+  
+  
+  .logo {
+    width: 40px;
+    margin-right: 40px;
+  }
+  
+  .nav {
+    display: flex;
+    height: 56px;
+    margin-top: 30px;
+  }
+  
+  .produtos-drop,
+  .explorar-drop {
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    width: 350px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .produtos-drop a,
+  .explorar-drop a {
+    color: black;
+  }
+  
+  .produtos-drop a:hover,
+  .explorar-drop a:hover {
+    color: blue;
+  }
+  
+  .produtos:hover .produtos-drop,
+  .explorar:hover .explorar-drop {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .nav-dois {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pesquisa {
+    border-radius: 9px;
+    height: 45px;
+    width: 250px;
+    opacity: 0.3;
+  }
+  
+  .inscrever-se {
+    padding: 0.6rem;
+    border: 1px white solid;
+    border-radius: 5px;
+  }
+  
+  .inscrever-se:hover {
+    border: 1px gray solid;
+    color: gray;
+  }
+  
+  .hamburguer {
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+  }
+  
+  @media (max-width: 1154px) {
+    .nav-dois {
+      display: none;
+    }
+    .hamburguer {
+      display: flex;
+    }
+  }
+  
+  .corpo {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+  
+  .dentro-corpo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    gap: 9px;
+    align-items: center;
+  }
+  
+  .globo {
+    margin-top: 170px;
+    margin-left: 0;
+  }
+  
+  .inscrever-sinalize {
+    border: 1px white solid;
+    background: green;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: max-content;
+  }
+  
+  .email {
+    height: 2.7rem;
+    width: 53%;
+    border-radius: 8px;
+    min-width: 100px;
+  }
+  
+  .titulo {
+    font-size: 60px;
+    margin: 170px 0 0 0;
+  }
+  
+  .corpo p {
+    margin-bottom: 35px;
+  }
+  
+  .segunda-pagina {
+    background: white;
+    display: flex;
+    width: 500px;
+    border-radius: 5px;
+  }
+  
+  .section-segunda {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-segunda-pagina {
+    color: black;
+    width: 200px;
+  }
+  
+  .container-segunda-pagina h3,
+  .container-segunda-pagina p {
+    color: black;
+  }
+  
+  .foto-empresa {
+    width: 50vw;
+  }

@@ -1,0 +1,106 @@
+.footer-link-footer {
+  padding: 0.5rem 1rem !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease !important;
+}
+
+a {
+  color: #6c757d !important;
+}
+a:hover {
+  color: #fec503 !important;
+  text-decoration: none !important;
+}
+
+::selection {
+  background: #fec503 !important;
+  text-shadow: none !important;
+}
+
+footer {
+  padding: 2rem 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-columns-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-column-footer:not(:first-child) {
+  padding-top: 2rem !important;
+}
+@media (min-width: 768px) {
+  .footer-column-footer:not(:first-child) {
+    padding-top: 0rem !important;
+  }
+}
+
+.footer-column-footer {
+  text-align: center !important;
+  flex: 1;
+  width: 205px;
+}
+.footer-column-footer .nav-item-footer .nav-link-footer {
+  padding: 0.1rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.footer-column-footer .nav-item-footer span.nav-link-footer {
+  color: #6c757d !important;
+}
+.footer-column-footer .nav-item-footer span.footer-title-footer {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+}
+.footer-column-footer .nav-item-footer .fas {
+  margin-bottom: 0.5rem !important;
+}
+
+.social-buttons-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.list-inline-item-footer {
+  list-style: none;
+}
+
+.list-inline-item-footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* color: #fff; */
+  transition: background-color 0.3s ease;
+}
+
+.list-inline-item-footer a:hover {
+  background-color: #fec503;
+}
+
+footer .quick-links-footer {
+  font-size: 90% !important;
+  line-height: 40px !important;
+  margin-bottom: 0 !important;
+  text-transform: none !important;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.copyright-footer {
+  color: white !important;
+}
+
+.fa-ellipsis-h {
+  color: white !important;
+  padding: 2rem 0 !important;
+}

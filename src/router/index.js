@@ -1,25 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import PaginaLogin from '@/views/PaginaLogin.vue';
-import PaginaCadastroLogin from '@/views/PaginaCadastroLogin.vue';
-import FormularioCadastroLogin from '@/components/FormularioCadastroLogin.vue';
-import LayoutPadrao from '@/layouts/LayoutPadrao.vue';
+// import PaginaLogin from '@/views/PaginaLogin.vue';
+import PaginaApresentacao from '@/views/PaginaApresentacao.vue';
+import LayoutApresentacao from '@/layouts/LayoutApresentacao.vue';
 
 const routes = [
   {
+    path: '/sinalize',
+    name: 'PaginaApresentacao',
+    component: PaginaApresentacao,
+    meta: { layout: LayoutApresentacao }
+  },
+  // ,{
+  //   path: '/login',
+  //   name: 'PaginaLogin',
+  //   component: PaginaLogin
+  // },
+  {
     path: '/',
-    name: 'PaginaLogin',
-    component: PaginaLogin
-  },
-  {
-    path: '/home',
-    name: 'PaginaCadastroLogin',
-    component: PaginaCadastroLogin,
-    meta: { layout: LayoutPadrao }
-  },
-  {
-    path: '/criar-conta',
-    name: 'FormularioCadastroLogin',
-    component: FormularioCadastroLogin
+    redirect: '/Sinalize'
   }
 ];
 
@@ -31,7 +29,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const isAuthenticated = false; // Lógica de autenticação
 
-  if (to.name !== 'PaginaLogin' && !isAuthenticated) next({ name: 'PaginaLogin' });
+  if (to.name !== 'PaginaApresentacao' && !isAuthenticated) next({ name: 'PaginaApresentacao' });
   else next();
 });
 

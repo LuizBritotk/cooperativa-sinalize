@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.header-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0% 1%;
+  width: 100%;
+}
+
+.logo-header {
+  width: 40px;
+  margin-right: 40px;
+  fill: white;
+}
+
+#logo-header {
+  width: 40px;
+  margin-right: 1rem;
+}
+
+/* nav-header {
+  display: flex;
+  align-items: center;
+} */
+
+.nav-header {
+  display: flex;
+  height: 56px;
+  margin-top: 30px;
+}
+
+.nav-header a {
+  text-decoration: none;
+  margin: 0.8rem;
+}
+
+.nav-dois-header {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin-left: auto;
+  margin-top: 25px; 
+}
+.pesquisa-header {
+  border-radius: 9px;
+  height: 20px;
+  width: 250px;
+  opacity: 0.3;
+  margin-right: 25px;
+}
+
+.entrar-header, .inscrever-se-header {
+  margin-left: 20px;
+}
+
+.inscrever-se-header {
+  padding: 0.6rem;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
+.inscrever-se-header:hover {
+  border: 1px gray solid;
+  color: gray;
+}
+
+.hamburguer-header {
+  display: none;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+@media (max-width: 1154px) {
+  .nav-dois-header {
+    display: none;
+  }
+  .hamburguer-header {
+    display: flex;
+  }
+}

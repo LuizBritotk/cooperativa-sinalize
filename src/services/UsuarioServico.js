@@ -80,7 +80,7 @@ const registrarUsuario = async (usuario) => {
     // eslint-disable-next-line no-debugger
     debugger;
     // Envia a solicitação para o backend
-    const resposta = await axios.post(`${USUARIOS_URL}/registrar-usuario-padrao`, {
+    const resposta = await axios.post(`${USUARIOS_URL}registrar-usuario-padrao`, {
       CPF: usuario.cpf,
       Nome: usuario.nome,
       Email: usuario.email,

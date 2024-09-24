@@ -1,0 +1,122 @@
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -1%;
+  width: 100%;
+}
+
+/* Fonte padrão */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: rgb(0, 0, 136);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 136, 1) 0%,
+    rgba(1, 1, 5, 1) 28%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: white;
+  line-height: 1.6;
+}
+
+/* Estilos para links */
+body a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+body a:hover {
+  color: #1e90ff;
+}
+
+/* Estilos para botões */
+body button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #1e90ff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+body button:hover {
+  background-color: #1c86ee;
+}
+
+/* Estilos para inputs */
+body input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+body input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+/* Estilos para listas */
+body ul {
+  list-style: none;
+}
+
+/* Estilos para navegação */
+body nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+body nav ul li {
+  position: relative;
+}
+
+/* Estilos para dropdowns */
+body nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body nav ul li:hover .dropdown {
+  display: block;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  body nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  body header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  body header {
+    padding: 2rem 4rem;
+  }
+
+  body nav ul li a {
+    padding: 1rem 2rem;
+  }
+}
