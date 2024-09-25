@@ -2,33 +2,39 @@
 
 .header-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 35px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 0% 1%;
   width: 100%;
 }
 
 .logo-header {
-  width: 40px;
-  margin-right: 40px;
+  /* top: 10px; */
+  width: 130px;
   fill: white;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
 }
 
 #logo-header {
-  width: 40px;
-  margin-right: 1rem;
-}
-
-/* nav-header {
   display: flex;
-  align-items: center;
-} */
+  justify-content: center;
+  width: 100%;
+}
+.nav-list-header{
+  width: 400px;
+  padding-left: 100px;
+}
 
 .nav-header {
   display: flex;
   height: 56px;
-  margin-top: 30px;
 }
 
 .nav-header a {
@@ -40,9 +46,8 @@
   display: flex;
   align-items: center;
   gap: 45px;
-  margin-left: auto;
-  margin-top: 25px; 
 }
+
 .pesquisa-header {
   border-radius: 9px;
   height: 20px;
@@ -59,6 +64,7 @@
   padding: 0.6rem;
   border: 1px white solid;
   border-radius: 5px;
+  width: 91px;
 }
 
 .inscrever-se-header:hover {
@@ -68,17 +74,52 @@
 
 .hamburguer-header {
   display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburguer-line {
   width: 35px;
   height: 5px;
   background-color: white;
   margin: 6px 0;
+  transition: 0.4s;
 }
 
 @media (max-width: 1154px) {
+  .nav-header {
+    display: none;
+  }
   .nav-dois-header {
     display: none;
   }
   .hamburguer-header {
     display: flex;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    padding: 10px; /* Optional: Add padding */
+    border-radius: 5px; /* Optional: Add border radius */
+  }
+  .mobile-menu .nav-list-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+  }
+  .mobile-menu .nav-item-header {
+    margin: 0.3rem 0;
   }
 }

@@ -4,8 +4,8 @@
       <ApresentacaoHeader />
     </header>
     <main>
-      <!-- <ApresentacaoSidebar />
-      <ApresentacaoCorpo /> -->
+      <!-- <ApresentacaoSidebar />-->
+      <ApresentacaoCorpo /> 
       <router-view></router-view>
     </main>
     <footer>
@@ -17,7 +17,7 @@
 <script>
 import ApresentacaoHeader from '@/components/ApresentacaoHeader.vue';
 // import ApresentacaoSidebar from '@/components/ApresentacaoSidebar.vue';
-// import ApresentacaoCorpo from '@/components/ApresentacaoCorpo.vue';
+import ApresentacaoCorpo from '@/components/ApresentacaoCorpo.vue';
 import ApresentacaoFooter from '@/components/ApresentacaoFooter.vue';
 
 export default {
@@ -25,7 +25,7 @@ export default {
   components: {
     ApresentacaoHeader,
     // ApresentacaoSidebar,
-    // ApresentacaoCorpo,
+    ApresentacaoCorpo,
     ApresentacaoFooter
   }
 }

@@ -1,11 +1,9 @@
-/* ApresentacaoCorpo.css */
-
 .corpo {
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
+    width: 500px;    
+    margin: 50px auto;
   }
   
   .titulo {
@@ -25,12 +23,6 @@
     align-items: center;
   }
   
-  .email {
-    height: 2.7rem;
-    width: 53%;
-    border-radius: 8px;
-    min-width: 100px;
-  }
   
   .inscrever-sinalize {
     border: 1px white solid;

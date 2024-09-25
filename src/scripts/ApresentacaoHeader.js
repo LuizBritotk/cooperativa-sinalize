@@ -2,12 +2,13 @@ export default {
     name: 'ApresentacaoHeader',
     data() {
       return {
+        isMenuOpen: false,
         pesquisa: ''
       };
     },
     methods: {
       toggleMenu() {
-        // Lógica para alternar o menu
+        this.isMenuOpen = !this.isMenuOpen;
       }
     }
   };

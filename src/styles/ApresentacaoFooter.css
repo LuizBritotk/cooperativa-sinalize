@@ -7,13 +7,14 @@
 a {
   color: #6c757d !important;
 }
+
 a:hover {
-  color: #fec503 !important;
+  color: #d3d3d3 !important; /* Light gray color */
   text-decoration: none !important;
 }
 
 ::selection {
-  background: #fec503 !important;
+  background: #d3d3d3 !important;
   text-shadow: none !important;
 }
 
@@ -26,14 +27,21 @@ footer {
 
 .footer-columns-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  width: 125%;
 }
 
 .footer-column-footer:not(:first-child) {
   padding-top: 2rem !important;
 }
+
 @media (min-width: 768px) {
+  .footer-columns-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .footer-column-footer:not(:first-child) {
     padding-top: 0rem !important;
   }
@@ -42,23 +50,28 @@ footer {
 .footer-column-footer {
   text-align: center !important;
   flex: 1;
-  width: 205px;
+  width: 100%;
+  max-width: 205px;
 }
+
 .footer-column-footer .nav-item-footer .nav-link-footer {
   padding: 0.1rem 0 !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
 }
+
 .footer-column-footer .nav-item-footer span.nav-link-footer {
   color: #6c757d !important;
 }
+
 .footer-column-footer .nav-item-footer span.footer-title-footer {
   font-size: 14px !important;
   font-weight: 700 !important;
   color: #fff !important;
   text-transform: uppercase !important;
 }
+
 .footer-column-footer .nav-item-footer .fas {
   margin-bottom: 0.5rem !important;
 }
@@ -66,11 +79,13 @@ footer {
 .social-buttons-footer {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Adjust the gap as needed */
+  gap: 15px;
+  padding: initial;
 }
 
 .list-inline-item-footer {
   list-style: none;
+  padding: initial;
 }
 
 .list-inline-item-footer a {
@@ -80,12 +95,15 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  /* color: #fff; */
   transition: background-color 0.3s ease;
 }
 
 .list-inline-item-footer a:hover {
-  background-color: #fec503;
+  background-color: #d3d3d3;
+}
+
+.social-icon {
+  filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
 }
 
 footer .quick-links-footer {

@@ -1,19 +1,16 @@
 <template>
-    <div>
-      <FundoTelaLogin />
-      <FormularioLoginV2 />
-    </div>
+  <div>
+    <FormularioLoginV3 />
+  </div>
 </template>
 
 <script>
-import FundoTelaLogin from '@/components/FundoTelaLogin.vue';
-import FormularioLoginV2 from '@/components/FormularioLoginV2.vue';
+import FormularioLoginV3 from '@/components/FormularioLoginV3.vue';
 
 export default {
   name: 'PaginaLogin',
   components: {
-    FundoTelaLogin,
-    FormularioLoginV2
+    FormularioLoginV3
   }
 };
 </script>

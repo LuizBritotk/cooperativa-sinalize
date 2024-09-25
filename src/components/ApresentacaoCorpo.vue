@@ -1,25 +1,53 @@
+html
+Copiar código
 <template>
-    <div class="corpo">
-      <h1 class="titulo">Onde o mundo constrói sinalização</h1>
-      <p>A Sinalize é uma cooperativa de sinalização em São Paulo que há 30 anos se tornou referência nesse mercado, sempre trazendo o que há de mais moderno e eficiente em sinalização viária.</p>
-      <p>A cooperativa de sinalização em São Paulo, a exemplo da Sinalize, utiliza tecnologias de ponta e equipamentos de última geração para entregar uma sinalização viária horizontal, vertical e semafórica da melhor qualidade do mercado.</p>
-      <p>Quando falamos em melhor qualidade, significa que essa cooperativa de sinalização em São Paulo produz soluções de alta capacidade a intempéries, muita durabilidade, antioxidantes, de fácil manuseio e instalação.</p>
-      <p>No que diz respeito às aplicações dessas soluções produzidas por uma cooperativa de sinalização em São Paulo, tanto se aplicam nas cidades, como também em ambientes específicos, a exemplo de estacionamentos, shopping centers, condomínios, complexos industriais, hospitais, empresas, entre outros.</p>
-      <p>A principal função de toda sinalização viária é orientar os motoristas e pedestres sobre direções, caminhos e rotas. Dessa forma, a sinalização contribui para aumentar a segurança e a eficiência na circulação de todos nos espaços urbanos.</p>
-      <p>Por se tratar de elementos que possuem todo um conjunto de normas e diretrizes determinados pelos órgãos reguladores (CONATRAN, DNER, dentre outros), a hora de escolher uma cooperativa de sinalização em São Paulo é fundamental para se certificar da seriedade, experiência e expertise da cooperativa que fabrica esses elementos.</p>
-      <p>E a Sinalize lidera no Estado de São Paulo quando o assunto for sinalização viária de todos os tipos, formatos e tamanhos.</p>
-      <p>Tipos de sinalização viária existentes:</p>
-      <p>Essencialmente, quando se busca pelos serviços oferecidos pela cooperativa de sinalização em São Paulo, há 3 tipos de sinalização, conforme já mencionado.</p>
-      <p>A sinalização vertical é aquela aplicada em mastros e estruturas elevadas para fixar as placas que comumente preenchem as vias.</p>
-      <p>A sinalização horizontal é aplicada no pavimento (asfalto), o que inclui faixas, linhas, símbolos e legendas.</p>
-      <p>A sinalização semafórica são os dispositivos luminosos, como o semáforo para veículos e pedestres.</p>
-      <p>E ao contratar essa cooperativa de sinalização em São Paulo, como a Sinalize, todas essas soluções são fabricadas, comercializadas e instaladas com excelência pela equipe profissional da cooperativa.</p>
-      <div class="dentro-corpo">
-        <input type="text" class="email" placeholder="      Endereço de e-mail" v-model="email">
-        <a href="" class="inscrever-sinalize" @click.prevent="inscrever">Inscreva-se na Sinalize</a>
-      </div>
-    </div>
-  </template>
+  <div class="corpo">
+    <!-- Seção de Serviços -->
+    <section class="secao servicos">
+      <h2>Serviços</h2>
+      <p>Oferecemos uma ampla gama de serviços de sinalização viária, incluindo:</p>
+      <ul>
+        <li>Pintura de rodovias (sinalização horizontal)</li>
+        <li>Instalação de placas de sinalização (sinalização vertical)</li>
+        <li>Manutenção de semáforos (sinalização semafórica)</li>
+        <li>Instalação de "tartarugas" e outros dispositivos de segurança viária</li>
+        <li>Manutenção e instalação de faixas de pedestres e ciclovias</li>
+      </ul>
+      <p>Nossa equipe especializada trabalha com tecnologias de ponta, garantindo serviços de alta qualidade para melhorar a segurança nas ruas e rodovias.</p>
+    </section>
+
+    <!-- Seção de Aluguéis -->
+    <section class="secao alugueis">
+      <h2>Aluguéis de Equipamentos</h2>
+      <p>Também oferecemos o aluguel de equipamentos de sinalização e veículos especializados para projetos temporários ou eventos. Alguns dos itens disponíveis incluem:</p>
+      <ul>
+        <li>Veículos para pintura e sinalização de rodovias</li>
+        <li>Placas de sinalização temporária</li>
+        <li>Barreiras de segurança e cones</li>
+        <li>Semáforos móveis</li>
+      </ul>
+      <p>Nossos equipamentos são regularmente inspecionados e seguem as normas de segurança vigentes, oferecendo a qualidade necessária para garantir a segurança no trânsito.</p>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section class="secao sobre-nos">
+      <h2>Sobre a Cooperativa Sinalize</h2>
+      <p>Com mais de 30 anos de experiência no setor de sinalização viária, a Cooperativa Sinalize é reconhecida pela excelência na prestação de serviços para rodovias e vias urbanas. Nossa missão é garantir a segurança e fluidez no trânsito, sempre utilizando soluções inovadoras e sustentáveis.</p>
+      <p>Além dos serviços de sinalização, também prestamos consultoria técnica para a criação de planos de mobilidade e segurança viária.</p>
+    </section>
+
+    <!-- Seção de Fotos -->
+    <section class="secao fotos">
+      <h2>Galeria de Fotos</h2>
+      <p>Veja abaixo alguns dos nossos projetos de sucesso:</p>
+      <!-- <div class="galeria-fotos">
+        <img src="exemplo-foto1.jpg" alt="Foto de um projeto de sinalização em rodovia">
+        <img src="exemplo-foto2.jpg" alt="Instalação de sinalização vertical em área urbana">
+        <img src="exemplo-foto3.jpg" alt="Veículo da cooperativa realizando pintura de faixas">
+      </div> -->
+    </section>
+  </div>
+</template>
   
 <script src="../scripts/ApresentacaoCorpo.js"></script>
 
