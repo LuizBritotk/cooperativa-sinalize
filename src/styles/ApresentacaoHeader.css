@@ -11,12 +11,11 @@
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
   width: 100%;
 }
 
 .logo-header {
-  /* top: 10px; */
   width: 130px;
   fill: white;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
@@ -27,9 +26,26 @@
   justify-content: center;
   width: 100%;
 }
-.nav-list-header{
-  width: 400px;
-  padding-left: 100px;
+
+.nav-list-header {
+  display: flex;
+  justify-content: center; 
+  width: 500px;
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
 }
 
 .nav-header {
@@ -40,6 +56,7 @@
 .nav-header a {
   text-decoration: none;
   margin: 0.8rem;
+   margin: 0 15px;
 }
 
 .nav-dois-header {
@@ -54,6 +71,7 @@
   width: 250px;
   opacity: 0.3;
   margin-right: 25px;
+  color: black;
 }
 
 .entrar-header, .inscrever-se-header {
@@ -101,18 +119,18 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .mobile-menu {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    top: 60px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    padding: 10px; /* Optional: Add padding */
-    border-radius: 5px; /* Optional: Add border radius */
+    top: 60px; 
+    right: 20px; 
+    padding: 10px; 
+    border-radius: 5px; 
   }
+
   .mobile-menu .nav-list-header {
     display: flex;
     flex-direction: column;

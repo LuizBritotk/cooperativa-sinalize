@@ -1,3 +1,5 @@
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
+
 header {
   display: flex;
   align-items: center;
@@ -15,9 +17,8 @@ body {
   transition: background 0.1s ease;
   color: white;
   line-height: 1.6;
-  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  height: 100vh; 
   margin: 0;
-  overflow: hidden; /* Prevent scrollbars from appearing */
 
 }
 

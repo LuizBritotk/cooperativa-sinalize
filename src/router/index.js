@@ -3,10 +3,11 @@ import PaginaApresentacao from '@/views/PaginaApresentacao.vue';
 import LayoutApresentacao from '@/layouts/LayoutApresentacao.vue';
 import PaginaLogin from '@/views/PaginaLogin.vue';
 import LayoutLogin from '@/layouts/LayoutLogin.vue';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const routes = [
   {
-    path: '/sinalize',
+    path: '/apresentacao',
     name: 'PaginaApresentacao',
     component: PaginaApresentacao,
     meta: { layout: LayoutApresentacao }
@@ -19,7 +20,7 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/sinalize'
+    redirect: '/apresentacao'
   }
 ];
 

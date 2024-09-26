@@ -12,7 +12,8 @@
       <a href="" id="logo-header"><img class="logo-header" src="@/assets/logo-sinalize.svg" alt="Logo"></a>
       <div class="nav-dois-header">
         <input class="pesquisa-header" type="text" placeholder="Pesquisar Sinalize" v-model="pesquisa">
-        <a href="" class="entrar-header">Entrar</a>
+        <a href="" class="entrar-header" @click.prevent="irParaLogin">Entrar</a>
+  
         <a href="" class="inscrever-se-header">Inscrever-se</a>
       </div>
       <div class="hamburguer-header" @click="toggleMenu">

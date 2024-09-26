@@ -1,38 +1,37 @@
 <template>
-    <div class="align">
-      <div class="grid">
-        <form @submit.prevent="handleSubmit" class="form login">
-          <div class="form__field">
-            <label for="login__username" class="form__label">
-              <svg class="icon">
-                <use xlink:href="#icon-user"></use>
-              </svg>
-            </label>
-            <input autocomplete="username" id="login__username" type="text" v-model="username" class="form__input" placeholder="Username" required>
-          </div>
-          <div class="form__field">
-            <label for="login__password" class="form__label">
-              <svg class="icon">
-                <use xlink:href="#icon-lock"></use>
-              </svg>
-            </label>
-            <input id="login__password" type="password" v-model="password" class="form__input" placeholder="Password" required>
-          </div>
-          <div class="form__field">
-            <input type="submit" value="Sign In" class="form__input form__input--submit">
-          </div>
-          <div class="form__field">
-            <!-- <button type="button" class="form__input form__input--google" @click="handleGoogleLogin"> -->
-              <img src="@/assets/google-logo-preto.svg" alt="Google icon" class="icon-google">
-              Sign in with Google
-            <!-- </button> -->
-          </div>
-        </form>
-        <!-- <p class="text--center">Not a member? <a href="#">Sign up now</a>
-          <svg class="icon">
-            <use xlink:href="#icon-arrow-right"></use>
-          </svg>
-        </p> -->
+  <div class="align">
+    <div class="grid">
+      <form @submit.prevent="handleSubmit" class="form login">
+        <div class="form__field">
+          <label for="login__username" class="form__label">
+            <svg class="icon">
+              <use xlink:href="#icon-user"></use>
+            </svg>
+          </label>
+          <input autocomplete="username" id="login__username" type="text" v-model="username" class="form__input" placeholder="Username" required>
+        </div>
+        <div class="form__field">
+          <label for="login__password" class="form__label">
+            <svg class="icon">
+              <use xlink:href="#icon-lock"></use>
+            </svg>
+          </label>
+          <input id="login__password" type="password" v-model="password" class="form__input" placeholder="Password" required>
+        </div>
+        <div class="form__field">
+          <input type="submit" value="Sign In" class="form__input form__input--submit">
+        </div>
+        <div class="form__field">
+          <!-- <button type="button" class="form__input form__input--google" @click="handleGoogleLogin"> -->
+          <img src="@/assets/google-logo-preto.svg" alt="Google icon" class="icon-google">
+          Sign in with Google
+          <!-- </button> -->
+        </div>
+      </form>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" class="icons">
         <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
@@ -46,8 +45,8 @@
         </symbol>
       </svg>
     </div>
-  </template>
-  
+  </div>
+</template>
   <script src="../scripts/FormularioLoginV3.js"></script>
 
 <style scoped>

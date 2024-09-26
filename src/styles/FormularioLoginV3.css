@@ -10,7 +10,8 @@
   .align {
     display: grid;
     place-items: center;
-    height: 100vh; /* Ensure the container takes the full height of the viewport */
+    height: 100vh; 
+    padding-right: 100px;
   }
   
   .grid {
