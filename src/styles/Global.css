@@ -1,25 +1,13 @@
-/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
-
-header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -1%;
-  width: 100%;
-}
-
 /* Fonte padrão */
 body {
   font-family: 'Open Sans', sans-serif;
   background: rgb(0, 0, 136);
-  background: radial-gradient(circle at center, rgba(75, 0, 130, 1), rgba(0, 0, 0, 1));
+  background: radial-gradient(circle at center, rgb(123 103 137), rgba(0, 0, 0, 1));
   transition: background 0.1s ease;
   color: white;
-  line-height: 1.6;
-  height: 100vh; 
+  line-height: 1;
+  height: 100vh;
   margin: 0;
-
 }
 
 /* Estilos para links */

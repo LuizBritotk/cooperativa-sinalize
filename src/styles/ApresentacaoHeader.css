@@ -1,24 +1,50 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-.header-header {
+.nav-header {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  padding-top: 35px;
+  width: 50%;
+}
+
+.nav-list-header {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item-header {
+  margin-right: 1rem;
+}
+
+/* Ajustes específicos para nav-dois-header */
+.nav-dois-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap; 
+}
+
+.pesquisa-header {
+  margin-right: 1rem;
+  flex: 1 1 auto; 
+  max-width: 300px; 
+}
+
+.entrar-header,
+.inscrever-se-header {
+  margin-left: 1rem;
+  flex: 0 1 auto; /* Permite que os links se ajustem ao espaço disponível */
 }
 
 .header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  width: 100%;
-}
-
-.logo-header {
-  width: 130px;
-  fill: white;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+  width: 95%;
+  padding: 1rem;
 }
 
 #logo-header {
@@ -48,26 +74,9 @@
   width: 40px;
 }
 
-.nav-header {
-  display: flex;
-  height: 56px;
-}
-
-.nav-header a {
-  text-decoration: none;
-  margin: 0.8rem;
-   margin: 0 15px;
-}
-
-.nav-dois-header {
-  display: flex;
-  align-items: center;
-  gap: 45px;
-}
-
 .pesquisa-header {
   border-radius: 9px;
-  height: 20px;
+  height: 35px;
   width: 250px;
   opacity: 0.3;
   margin-right: 25px;
@@ -82,7 +91,8 @@
   padding: 0.6rem;
   border: 1px white solid;
   border-radius: 5px;
-  width: 91px;
+  width: 93px;
+  text-align: center;
 }
 
 .inscrever-se-header:hover {

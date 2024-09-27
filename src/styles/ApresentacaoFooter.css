@@ -57,7 +57,7 @@ footer {
 .footer-column-footer .nav-item-footer .nav-link-footer {
   padding: 0.1rem 0 !important;
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important; /* Change to row to align icon and text horizontally */
   align-items: center !important;
 }
 
@@ -73,7 +73,7 @@ footer {
 }
 
 .footer-column-footer .nav-item-footer .fas {
-  margin-bottom: 0.5rem !important;
+  margin-right: 0.5rem !important; /* Adjust margin to the right to space between icon and text */
 }
 
 .social-buttons-footer {

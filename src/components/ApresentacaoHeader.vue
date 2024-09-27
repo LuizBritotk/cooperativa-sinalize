@@ -9,7 +9,7 @@
           <li class="nav-item-header"><a href="#">Fotos</a></li>
         </ul>
       </nav>
-      <a href="" id="logo-header"><img class="logo-header" src="@/assets/logo-sinalize.svg" alt="Logo"></a>
+      <!-- <a href="" id="logo-header"><img class="logo-header" src="@/assets/logo-sinalize.svg" alt="Logo"></a> -->
       <div class="nav-dois-header">
         <input class="pesquisa-header" type="text" placeholder="Pesquisar Sinalize" v-model="pesquisa">
         <a href="" class="entrar-header" @click.prevent="irParaLogin">Entrar</a>

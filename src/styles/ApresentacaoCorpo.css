@@ -1,35 +1,87 @@
-.corpo {
-    font-size: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    width: 43%; 
-    margin: 50px auto;
-  }
-  
-  .titulo {
-    font-size: 60px;
-    margin: 170px 0 0 0;
-  }
-  
-  .corpo p {
-    margin-bottom: 35px;
-  }
-  
-  .dentro-corpo {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px;
-    gap: 9px;
-    align-items: center;
-  }
-  
-  
-  .inscrever-sinalize {
-    border: 1px white solid;
-    background: green;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-    width: max-content;
-  }
+/* :root {
+  --primary-color: #24292e;
+  --secondary-color: #0366d6;
+  --text-color: #ffffff;
+  --background-color: #f6f8fa;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.header .btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.secao {
+  padding: 2rem 0;
+}
+
+.secao .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.secao h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.servico-item {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.galeria-fotos img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
